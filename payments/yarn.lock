@@ -286,10 +286,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@gmutti/common@^1.0.13":
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/@gmutti/common/-/common-1.0.13.tgz#63e3b49cca95c7d6163ff804c83b1158052b796f"
-  integrity sha512-jImdJkpfIQuWJ6LvI9T3DRzFBuh1dfJMTCGdtdUH+8OZubyJLKZp+t4FL2iuXkpGeDYa6fcsMrB+kNy/HIxOZA==
+"@gmutti/common@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@gmutti/common/-/common-1.0.15.tgz#0505a2a2594c4b7d9a5dcc07014a1eb0d614bcfe"
+  integrity sha512-3uu3UEPRZlSbIO/3ZuuKuUjygtr9MB8uasjJBFBTSEP63kL+JMUVH89kgej2pJdz/AlGjy5gZIM56l0KVQukBQ==
   dependencies:
     "@types/cookie-session" "^2.0.43"
     "@types/express" "^4.17.13"
@@ -627,6 +627,13 @@
   version "8.5.5"
   resolved "https://registry.yarnpkg.com/@types/jsonwebtoken/-/jsonwebtoken-8.5.5.tgz#da5f2f4baee88f052ef3e4db4c1a0afb46cff22c"
   integrity sha512-OGqtHQ7N5/Ap/TUwO6IgHDuLiAoTmHhGpNvgkCm/F4N6pKzx/RBSfr2OXZSwC6vkfnsEdb6+7DNZVtiXiwdwFw==
+  dependencies:
+    "@types/node" "*"
+
+"@types/jsonwebtoken@^8.5.8":
+  version "8.5.8"
+  resolved "https://registry.yarnpkg.com/@types/jsonwebtoken/-/jsonwebtoken-8.5.8.tgz#01b39711eb844777b7af1d1f2b4cf22fda1c0c44"
+  integrity sha512-zm6xBQpFDIDM6o9r6HSgDeIcLy82TKWctCXEPbJJcXb5AKmi5BNNdLXneixK4lplX3PqIVcwLBCGE/kAGnlD4A==
   dependencies:
     "@types/node" "*"
 

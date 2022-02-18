@@ -19,8 +19,8 @@ const router = express.Router();
 router.post(
   "/api/payments",
   requireAuth,
-  validateRequest,
   [body("token").not().isEmpty(), body("orderId").not().isEmpty()],
+  validateRequest,
   async (req: Request, res: Response) => {
     const { token, orderId } = req.body;
 
@@ -53,8 +53,8 @@ router.post(
     new PaymentCreatedPublisher(natsWrapper.client).publish({
       id: payment.id,
       orderId: payment.orderId,
-      stripeId: payment.stripeId
-    })
+      stripeId: payment.stripeId,
+    });
     res.status(201).send({ payment: payment.id });
   }
 );

@@ -4,9 +4,10 @@ import { OrderStatus } from "@gmutti/common";
 import { Order } from "../../models/order";
 import { app } from "../../app";
 import { stripe } from "../../stripe";
-import {Payment} from "../../models/payment";
 
 jest.mock("../../stripe");
+jest.mock('../../nats-wrapper');
+
 
 it("returns 404 when try to pay for non existing order ", async () => {
   await request(app)
@@ -62,7 +63,7 @@ it("returns bad request if try to pay cancelled order", async () => {
     .expect(400);
 });
 
-it("returns a 204 with valid inputs", async () => {
+it("returns a 201 with valid inputs", async () => {
   const userId = new mongoose.Types.ObjectId().toHexString();
   const order = Order.build({
     id: new mongoose.Types.ObjectId().toHexString(),
